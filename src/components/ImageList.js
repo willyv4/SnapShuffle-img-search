@@ -27,7 +27,7 @@ export const ImageList = () => {
 
   return (
     <>
-      {(errorMessage || images.length === 0) && images.length === 0 && (
+      {errorMessage && images.length === 0 && (
         <FullScreenErrorDiv>
           {errorMessage && (
             <CenteredErrorText>{`${errorMessage} 🥲`}</CenteredErrorText>
@@ -41,7 +41,7 @@ export const ImageList = () => {
           setImageSelected={setImageSelected}
         />
       )}
-      {images && (
+      {images ? (
         <UlImageList role="list">
           {images.map((image, index) => (
             <li
@@ -59,6 +59,10 @@ export const ImageList = () => {
             </li>
           ))}
         </UlImageList>
+      ) : (
+        <FullScreenErrorDiv>
+          <CenteredErrorText>Loading... 😁</CenteredErrorText>
+        </FullScreenErrorDiv>
       )}
     </>
   );

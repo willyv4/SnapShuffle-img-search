@@ -42,9 +42,7 @@ export const useImageHoverEffect = (images) => {
         observer.observe(element);
       } else {
         console.warn("OBSERVER error: image element wans't type of element");
-        setErrorMessage(
-          `Whoops, no photos were found with search query: ${query}`
-        );
+        setErrorMessage(`Whoops, something went wrong: ${query}`);
       }
     });
 
