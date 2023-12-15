@@ -1,7 +1,7 @@
 import { createClient } from "pexels";
-import { APIKEY } from "../config";
+import Config from "../config.json";
 
-const client = createClient(APIKEY);
+const client = createClient(Config.APIKEY);
 
 class imgApi {
   static async getPhotosByName(searchQuery) {
