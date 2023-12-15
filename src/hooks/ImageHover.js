@@ -1,9 +1,12 @@
 /* eslint-disable array-callback-return */
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { MyContext } from "../App";
 
 export const useImageHoverEffect = (images) => {
   const imageElements = useRef([]);
+  const { query } = useContext(MyContext);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (!images) return;
@@ -35,11 +38,18 @@ export const useImageHoverEffect = (images) => {
     });
 
     imageElements.current.forEach((element) => {
-      observer.observe(element);
+      if (element instanceof Element) {
+        observer.observe(element);
+      } else {
+        console.warn("OBSERVER error: image element wans't type of element");
+        setErrorMessage(
+          `Whoops, no photos were found with search query: ${query}`
+        );
+      }
     });
 
     return () => observer.disconnect();
-  }, [images]);
+  }, [images, query]);
 
-  return { imageElements };
+  return { imageElements, errorMessage };
 };

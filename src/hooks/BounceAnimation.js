@@ -1,10 +1,10 @@
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
 export const useImageBounceEffect = (image) => {
   const imagePreviewRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const parent = imagePreviewRef.current;
 
     if (image) {
@@ -23,7 +23,7 @@ export const useImageBounceEffect = (image) => {
       );
     }
 
-    return () => {};
+    return () => gsap.killTweensOf(parent);
   }, [image]);
 
   return { imagePreviewRef };

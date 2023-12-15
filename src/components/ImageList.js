@@ -1,4 +1,8 @@
-import { UlImageList } from "../styledComponents/ImageListUnorderd";
+import {
+  CenteredErrorText,
+  FullScreenErrorDiv,
+  UlImageList,
+} from "../styledComponents/ImageListUnorderd";
 import { StyledDiv } from "../styledComponents/ImageDiv";
 import { ImageCard } from "../styledComponents/ImageCard";
 import { useState, useEffect, useContext } from "react";
@@ -11,7 +15,7 @@ export const ImageList = () => {
   const [images, setImages] = useState([]);
   const { query } = useContext(MyContext);
   const [imageSelected, setImageSelected] = useState(null);
-  const { imageElements } = useImageHoverEffect(images);
+  const { imageElements, errorMessage } = useImageHoverEffect(images);
 
   useEffect(() => {
     async function getPhotos() {
@@ -23,6 +27,14 @@ export const ImageList = () => {
 
   return (
     <>
+      {(errorMessage || images.length === 0) && images.length === 0 && (
+        <FullScreenErrorDiv>
+          {errorMessage && (
+            <CenteredErrorText>{`${errorMessage} 🥲`}</CenteredErrorText>
+          )}
+          <CenteredErrorText>Try Another Search 😁</CenteredErrorText>
+        </FullScreenErrorDiv>
+      )}
       {imageSelected && (
         <ImagePreview
           image={imageSelected}

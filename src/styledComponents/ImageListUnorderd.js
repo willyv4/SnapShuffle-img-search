@@ -22,3 +22,27 @@ export const UlImageList = styled.ul`
     column-gap: 3rem;
   }
 `;
+
+export const FullScreenErrorDiv = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  background-image: ${`url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`};
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CenteredErrorText = styled.h1`
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding-left: 80px;
+  padding-right: 80px;
+`;
