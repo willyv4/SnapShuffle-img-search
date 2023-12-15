@@ -38,10 +38,14 @@ export const LogoContainer = styled.div`
 export const FormContainer = styled.form`
   position: relative;
   place-items: center;
-  margin-right: 6rem;
+  margin-right: 5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (max-width: 550px) {
+    margin-right: 4rem;
+  }
 `;
 
 export const InputField = styled.input`
@@ -52,19 +56,9 @@ export const InputField = styled.input`
   width: 220px;
   display: block;
   outline: none;
-  height: 15.5px;
 
-  @media (max-width: 640px) {
-    padding-right: 0px;
-    margin-right: -20px;
-    width: screen;
-  }
-
-  @media (max-width: 450px) {
-    padding-right: 0px;
-    margin-right: -20px;
+  @media (max-width: 472px) {
     margin-bottom: 20px;
-    width: screen;
   }
 `;
 

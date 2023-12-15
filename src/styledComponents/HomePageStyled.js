@@ -68,7 +68,7 @@ export const StyledDiv = styled.div`
     border-color: rgba(55, 65, 81, 0.3);
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 472px) {
     display: none;
   }
 `;
