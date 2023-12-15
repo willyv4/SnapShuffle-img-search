@@ -6,7 +6,6 @@ import {
   LogoContainer,
   SnapShuffleLogo,
   SubmitButton,
-  SvgWrapper,
 } from "../styledComponents/NavBar";
 import { NavBarStyled } from "../styledComponents/NavBar";
 import { useContext, useState } from "react";
