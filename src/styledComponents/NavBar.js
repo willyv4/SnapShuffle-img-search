@@ -36,7 +36,9 @@ export const LogoContainer = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  margin-right: 5rem;
+  position: relative;
+  place-items: center;
+  margin-right: 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,9 +51,6 @@ export const InputField = styled.input`
   padding: 8px;
   width: 220px;
   display: block;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-right: none;
   outline: none;
   height: 15.5px;
 
@@ -70,24 +69,14 @@ export const InputField = styled.input`
 `;
 
 export const SubmitButton = styled.button`
-  display: block;
-  border: 2px solid lightgray;
-  border-radius: 6px;
-  background-color: white;
-  padding: 6px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-left: none;
-  outline: none;
-
-  @media (max-width: 640px) {
-    margin-right: -20px;
-    padding-right: 0px;
-  }
-
-  @media (max-width: 450px) {
-    padding-right: 0px;
-    margin-right: -20px;
-    margin-bottom: 20px;
-  }
+  position: absolute;
+  inset-inline-start: auto;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  right: 0;
+  display: flex;
+  padding-top: 0.375rem;
+  padding-right: 0.375rem;
+  border: none;
+  background-color: transparent;
 `;
