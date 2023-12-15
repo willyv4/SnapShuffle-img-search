@@ -30,6 +30,7 @@ export const SnapShuffleLogo = styled.h1`
 `;
 
 export const LogoContainer = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
