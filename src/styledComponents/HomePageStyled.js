@@ -67,6 +67,10 @@ export const StyledDiv = styled.div`
   &:hover {
     border-color: rgba(55, 65, 81, 0.3);
   }
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const StyledHeading = styled.h1`
@@ -94,7 +98,6 @@ export const InputWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  position: relative;
   width: 100%;
   height: auto;
   background: linear-gradient(
@@ -109,7 +112,7 @@ export const ImageWrapper = styled.div`
   @media (min-width: 1024px) {
     position: absolute;
     z-index: -10;
-    margin-top: -78px;
+    margin-top: -80px;
     inset-inline-start: auto;
     inset-inline-end: 0;
     inset-block-start: 0;
