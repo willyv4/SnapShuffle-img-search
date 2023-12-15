@@ -70,6 +70,7 @@ export const InputField = styled.input`
 `;
 
 export const SubmitButton = styled.button`
+  display: block;
   border: 2px solid lightgray;
   border-radius: 6px;
   background-color: white;
@@ -82,13 +83,11 @@ export const SubmitButton = styled.button`
   @media (max-width: 640px) {
     margin-right: -20px;
     padding-right: 0px;
-    width: screen;
   }
 
   @media (max-width: 450px) {
     padding-right: 0px;
     margin-right: -20px;
     margin-bottom: 20px;
-    width: screen;
   }
 `;
