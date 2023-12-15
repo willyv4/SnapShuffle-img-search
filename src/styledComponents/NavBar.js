@@ -43,17 +43,17 @@ export const FormContainer = styled.form`
 `;
 
 export const InputField = styled.input`
-  padding: 0px 2.5rem 0px 2.5rem;
   border: 2px solid lightgray;
   border-radius: 6px;
   background-color: white;
-  padding: 9.5px;
+  padding: 8px;
   width: 220px;
   display: block;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-right: none;
   outline: none;
+  height: 15.5px;
 
   @media (max-width: 640px) {
     padding-right: 0px;
